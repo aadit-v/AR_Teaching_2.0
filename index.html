@@ -8,6 +8,16 @@
     />
     <meta name="theme-color" content="#06090d" />
     <title>DNM 8Z100A — Faceplate Guide</title>
+    <link rel="stylesheet" href="/src/styles/app.css" />
+    <script>
+      // Without this, a module that fails to load leaves a silent black screen.
+      window.addEventListener('error', (e) => {
+        const box = document.querySelector('#boot-error');
+        if (!box) return;
+        box.hidden = false;
+        box.textContent = 'Startup failed: ' + (e.message || e.error || 'unknown error');
+      });
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,6 +26,7 @@
     />
   </head>
   <body>
+    <pre id="boot-error" hidden></pre>
     <div id="ar-stage"></div>
 
     <!-- Entry gate. Camera permission must follow a user gesture on iOS Safari. -->
