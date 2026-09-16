@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#06090d" />
+    <title>DNM 8Z100A — Faceplate Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="ar-stage"></div>
+
+    <!-- Entry gate. Camera permission must follow a user gesture on iOS Safari. -->
+    <div id="gate">
+      <div class="gate-card">
+        <div class="gate-meter" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </div>
+        <h1>Every knob on the 8Z100A, explained where it sits</h1>
+        <p>
+          Point your camera at the boombox sticker on the MUSIC VOL knob. Pins appear over
+          each control across the faceplate — tap one to see what it does.
+        </p>
+        <button id="start">Start the camera</button>
+        <small>Hold the phone about 30&nbsp;cm from the panel, sticker fully in frame.</small>
+      </div>
+    </div>
+
+    <!-- Tracking state readout -->
+    <div id="hud" data-tone="seeking">
+      <span class="hud-dot" aria-hidden="true"></span>
+      <span data-status>Point at the boombox sticker</span>
+    </div>
+
+    <!-- No camera? The registry is still the useful part. -->
+    <section id="fallback" hidden>
+      <h2>Faceplate reference</h2>
+      <p data-reason></p>
+      <ol id="fallback-list"></ol>
+    </section>
+
+    <div id="drawer-root"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
