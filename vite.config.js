@@ -7,6 +7,6 @@ export default defineConfig({
   base: './',
   plugins: [basicSsl()],
   server: { https: true, host: true, port: 5173 },
-  optimizeDeps: { exclude: ['mind-ar'] },
+  optimizeDeps: { include: ['mind-ar/dist/mindar-image-three.prod.js', 'three'] },
   build: { target: 'es2020' },
 });
