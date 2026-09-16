@@ -5,7 +5,6 @@ import { createIcons, icons } from 'lucide';
 import { CONTROLS_DATA } from './data/controlsData.js';
 import { createHotspots } from './ar/hotspots.js';
 import { createDrawer } from './ui/drawer.js';
-import './styles/app.css';
 
 const els = {
   stage: document.querySelector('#ar-stage'),
