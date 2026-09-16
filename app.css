@@ -33,6 +33,20 @@ h2 {
   margin: 0;
 }
 
+#boot-error {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 14px 16px;
+  font: 500 0.82rem/1.45 ui-monospace, monospace;
+  color: #ffd9c9;
+  background: #7a2312;
+  white-space: pre-wrap;
+}
+
 /* ---------- AR stage ---------- */
 #ar-stage {
   position: fixed;
